@@ -272,6 +272,12 @@ h1 span {
 .story-video-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
 .story-video-frame::before { content: "SATAC / VIDEO"; position: absolute; top: 14px; left: 16px; color: rgba(99,230,255,.35); font: .6rem "Cascadia Code", monospace; letter-spacing: .12em; }
 .story-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.story-photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 36px; }
+.story-photo-pair figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
+.story-photo-pair img { display: block; width: 100%; height: auto; }
+.story-photo-pair figcaption { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 14px; }
+.story-photo-pair figcaption span { color: var(--cyan); font: .58rem "Cascadia Code", monospace; letter-spacing: .09em; }
+.story-photo-pair figcaption strong { font-size: .85rem; }
 .story-copy { display: grid; gap: 18px; color: #aab6ca; }
 .story-copy p { margin: 0; }
 .story-copy .story-lead { color: #dce6f4; font-size: 1.05rem; }
@@ -373,6 +379,7 @@ h1 span {
   .story-dialog-panel { padding: 54px 24px 30px; }
   .story-dialog h2 { font-size: 2rem; }
   .story-video-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .story-photo-pair { grid-template-columns: 1fr; }
   .feature-notes { grid-template-columns: 1fr; }
   .photo-gallery { columns: 1; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
