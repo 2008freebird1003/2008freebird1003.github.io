@@ -259,6 +259,14 @@ h1 span {
 .story-code { margin-bottom: 20px; color: var(--cyan); font: .7rem "Cascadia Code", monospace; letter-spacing: .14em; }
 .story-dialog h2 { max-width: 700px; margin-bottom: 34px; font-size: clamp(2rem, 4.5vw, 4.15rem); line-height: 1.08; letter-spacing: -.04em; }
 .story-dialog h2 span { color: transparent; background: linear-gradient(110deg, var(--cyan), var(--blue)); background-clip: text; -webkit-background-clip: text; }
+.story-video { margin-bottom: 36px; }
+.story-video-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 14px; }
+.story-video-heading h3 { margin: 0; font-size: 1.1rem; letter-spacing: -.01em; }
+.story-video-heading a { color: var(--cyan); font: .68rem "Cascadia Code", monospace; letter-spacing: .05em; }
+.story-video-heading a:hover { color: var(--green); }
+.story-video-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
+.story-video-frame::before { content: "SATAC / VIDEO"; position: absolute; top: 14px; left: 16px; color: rgba(99,230,255,.35); font: .6rem "Cascadia Code", monospace; letter-spacing: .12em; }
+.story-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .story-copy { display: grid; gap: 18px; color: #aab6ca; }
 .story-copy p { margin: 0; }
 .story-copy .story-lead { color: #dce6f4; font-size: 1.05rem; }
@@ -339,6 +347,7 @@ h1 span {
   .interest-trigger { min-height: 210px; }
   .story-dialog-panel { padding: 54px 24px 30px; }
   .story-dialog h2 { font-size: 2rem; }
+  .story-video-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
   .skill-group p { grid-column: 2; }
   .contact-box { padding: 28px 22px; }
