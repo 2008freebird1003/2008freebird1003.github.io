@@ -39,3 +39,4 @@ const setupDialog = (triggerSelector, dialogSelector, closeSelector) => {
 setupDialog('.story-trigger', '#flight-story', '.story-close');
 setupDialog('.gallery-trigger', '#aeromodel-gallery', '.gallery-close');
 setupDialog('.aquascape-trigger', '#aquascape-story', '.aquascape-close');
+setupDialog('.windsurf-trigger', '#windsurf-story', '.windsurf-close');
