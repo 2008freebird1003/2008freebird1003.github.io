@@ -277,13 +277,12 @@ h1 span {
 
 .aquascape-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--line); }
 .aquascape-notes article { display: grid; gap: 12px; padding: 22px; background: #09111e; }
-.aquascape-notes span, .aquascape-photo-note span { color: var(--cyan); font: .62rem "Cascadia Code", monospace; letter-spacing: .1em; }
+.aquascape-notes span { color: var(--cyan); font: .62rem "Cascadia Code", monospace; letter-spacing: .1em; }
 .aquascape-notes strong { font-size: 1.15rem; }
-.aquascape-notes p, .aquascape-photo-note p { margin: 0; color: var(--muted); font-size: .9rem; }
-.aquascape-photo-note { display: grid; min-height: 170px; margin-top: 18px; padding: 28px; align-content: center; gap: 10px; border: 1px dashed rgba(99,230,255,.3); border-radius: 12px; background: linear-gradient(135deg, rgba(99,230,255,.035), rgba(95,135,255,.035)); }
-.aquascape-photo-note strong { font-size: 1.35rem; }
+.aquascape-notes p { margin: 0; color: var(--muted); font-size: .9rem; }
 
-.aeromodel-gallery { columns: 2; column-gap: 14px; }
+.photo-gallery { columns: 2; column-gap: 14px; }
+.aquascape-gallery { margin-top: 18px; }
 .gallery-item { position: relative; min-width: 0; margin: 0 0 14px; overflow: hidden; break-inside: avoid; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
 .gallery-item img { width: 100%; height: auto; display: block; transition: transform .45s ease; }
 .gallery-item:hover img { transform: scale(1.025); }
@@ -370,7 +369,7 @@ h1 span {
   .story-dialog h2 { font-size: 2rem; }
   .story-video-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
   .aquascape-notes { grid-template-columns: 1fr; }
-  .aeromodel-gallery { columns: 1; }
+  .photo-gallery { columns: 1; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
   .skill-group p { grid-column: 2; }
   .contact-box { padding: 28px 22px; }
