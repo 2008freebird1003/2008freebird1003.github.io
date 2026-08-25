@@ -139,9 +139,9 @@ h1, h2, h3, p { margin-top: 0; }
 h1 {
   max-width: 760px;
   margin-block: 24px;
-  font-size: clamp(3rem, 6.5vw, 6rem);
-  line-height: 1.03;
-  letter-spacing: -.055em;
+  font-size: clamp(2.8rem, 5.6vw, 5.25rem);
+  line-height: 1.14;
+  letter-spacing: -.045em;
 }
 
 h1 span {
@@ -295,7 +295,7 @@ h1 span {
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: 11px 12px; }
   .hero { gap: 58px; }
-  h1 { font-size: clamp(2.8rem, 14vw, 4.4rem); }
+  h1 { font-size: clamp(2.55rem, 12vw, 4rem); }
   .orbit-card { width: min(100%, 360px); }
   .content-section, .contact-section { padding-block: 82px; }
   .section-heading { display: block; margin-bottom: 38px; }
