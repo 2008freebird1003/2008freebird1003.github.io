@@ -274,10 +274,9 @@ h1 span {
 .story-copy .story-lead { color: #dce6f4; font-size: 1.05rem; }
 .story-copy .story-ending { padding-top: 18px; color: var(--cyan); border-top: 1px solid var(--line); font-size: 1.12rem; font-weight: 700; }
 
-.aeromodel-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.gallery-item { position: relative; min-width: 0; margin: 0; overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
-.gallery-item.gallery-featured { grid-column: 1 / -1; aspect-ratio: 16 / 8.5; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.aeromodel-gallery { columns: 2; column-gap: 14px; }
+.gallery-item { position: relative; min-width: 0; margin: 0 0 14px; overflow: hidden; break-inside: avoid; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
+.gallery-item img { width: 100%; height: auto; display: block; transition: transform .45s ease; }
 .gallery-item:hover img { transform: scale(1.025); }
 .gallery-item::after { content: ""; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(3,7,14,.9)); pointer-events: none; }
 .gallery-item figcaption { position: absolute; z-index: 1; right: 18px; bottom: 16px; left: 18px; display: flex; align-items: end; justify-content: space-between; gap: 18px; }
@@ -361,8 +360,7 @@ h1 span {
   .story-dialog-panel { padding: 54px 24px 30px; }
   .story-dialog h2 { font-size: 2rem; }
   .story-video-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
-  .aeromodel-gallery { grid-template-columns: 1fr; }
-  .gallery-item.gallery-featured { grid-column: auto; aspect-ratio: 4 / 3; }
+  .aeromodel-gallery { columns: 1; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
   .skill-group p { grid-column: 2; }
   .contact-box { padding: 28px 22px; }
