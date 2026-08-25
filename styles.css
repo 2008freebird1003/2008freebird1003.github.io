@@ -234,11 +234,13 @@ h1 span {
 .interest-strip strong { font-size: 1.3rem; }
 .interest-strip small { color: var(--muted); }
 .interest-strip .interactive-interest { padding: 0; }
-.interest-trigger { display: grid; width: 100%; min-height: 100%; padding: 28px; color: var(--text); text-align: left; border: 0; background: transparent; cursor: pointer; transition: background .2s ease; }
-.interest-trigger:hover { background: rgba(99,230,255,.045); }
-.interest-trigger strong, .interest-trigger small { display: block; }
-.interest-trigger em { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 24px; color: var(--cyan); font: normal .66rem "Cascadia Code", monospace; letter-spacing: .06em; }
-.interest-trigger em span { margin: 0; font-size: .8rem; }
+.interest-card-body { display: grid; min-height: 100%; padding: 28px; }
+.interest-card-body strong, .interest-card-body small { display: block; }
+.interest-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 24px; }
+.interest-action { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 11px; color: var(--cyan); text-align: left; border: 1px solid var(--line); border-radius: 7px; background: rgba(99,230,255,.025); cursor: pointer; font: .64rem "Cascadia Code", monospace; letter-spacing: .04em; transition: color .2s ease, border-color .2s ease, background .2s ease; }
+.interest-action span { margin: 0; color: inherit; font: inherit; }
+.interest-action b { font-size: .8rem; font-weight: 400; }
+.interest-action:hover { color: var(--green); border-color: rgba(99,230,255,.48); background: rgba(99,230,255,.07); }
 
 .story-dialog {
   width: min(calc(100% - 32px), 920px);
@@ -271,6 +273,16 @@ h1 span {
 .story-copy p { margin: 0; }
 .story-copy .story-lead { color: #dce6f4; font-size: 1.05rem; }
 .story-copy .story-ending { padding-top: 18px; color: var(--cyan); border-top: 1px solid var(--line); font-size: 1.12rem; font-weight: 700; }
+
+.aeromodel-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.gallery-item { position: relative; min-width: 0; margin: 0; overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
+.gallery-item.gallery-featured { grid-column: 1 / -1; aspect-ratio: 16 / 8.5; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.gallery-item:hover img { transform: scale(1.025); }
+.gallery-item::after { content: ""; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(3,7,14,.9)); pointer-events: none; }
+.gallery-item figcaption { position: absolute; z-index: 1; right: 18px; bottom: 16px; left: 18px; display: flex; align-items: end; justify-content: space-between; gap: 18px; }
+.gallery-item figcaption span { color: var(--cyan); font: .6rem "Cascadia Code", monospace; letter-spacing: .1em; }
+.gallery-item figcaption strong { font-size: 1rem; }
 
 @keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
 
@@ -344,10 +356,13 @@ h1 span {
   .interest-strip { grid-template-columns: 1fr; }
   .interest-strip article { border-right: 0; border-bottom: 1px solid var(--line); }
   .interest-strip article:last-child { border-bottom: 0; }
-  .interest-trigger { min-height: 210px; }
+  .interest-card-body { min-height: 230px; }
+  .interest-actions { grid-template-columns: 1fr; }
   .story-dialog-panel { padding: 54px 24px 30px; }
   .story-dialog h2 { font-size: 2rem; }
   .story-video-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .aeromodel-gallery { grid-template-columns: 1fr; }
+  .gallery-item.gallery-featured { grid-column: auto; aspect-ratio: 4 / 3; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
   .skill-group p { grid-column: 2; }
   .contact-box { padding: 28px 22px; }

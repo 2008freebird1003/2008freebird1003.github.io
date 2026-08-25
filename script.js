@@ -16,22 +16,25 @@ navigation?.querySelectorAll('a').forEach((link) => {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-const flightTrigger = document.querySelector('.interest-trigger');
-const flightDialog = document.querySelector('#flight-story');
-const flightDialogClose = document.querySelector('.story-close');
+const setupDialog = (triggerSelector, dialogSelector, closeSelector) => {
+  const trigger = document.querySelector(triggerSelector);
+  const dialog = document.querySelector(dialogSelector);
+  const closeButton = dialog?.querySelector(closeSelector);
 
-flightTrigger?.addEventListener('click', () => {
-  if (typeof flightDialog?.showModal === 'function') {
-    flightDialog.showModal();
-  } else {
-    flightDialog?.setAttribute('open', '');
-  }
-});
+  trigger?.addEventListener('click', () => {
+    if (typeof dialog?.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog?.setAttribute('open', '');
+    }
+  });
 
-flightDialogClose?.addEventListener('click', () => flightDialog?.close());
+  closeButton?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog?.addEventListener('close', () => trigger?.focus());
+};
 
-flightDialog?.addEventListener('click', (event) => {
-  if (event.target === flightDialog) flightDialog.close();
-});
-
-flightDialog?.addEventListener('close', () => flightTrigger?.focus());
+setupDialog('.story-trigger', '#flight-story', '.story-close');
+setupDialog('.gallery-trigger', '#aeromodel-gallery', '.gallery-close');

@@ -24,8 +24,8 @@
     />
     <meta name="twitter:image" content="https://2008freebird1003.github.io/og.png" />
     <title>htwj123 · 个人网站</title>
-    <link rel="stylesheet" href="styles.css?v=20260825-6" />
-    <script src="script.js?v=20260825-5" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260825-7" />
+    <script src="script.js?v=20260825-7" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
@@ -94,12 +94,19 @@
         </div>
         <div class="interest-strip" aria-label="兴趣领域">
           <article class="interactive-interest">
-            <button class="interest-trigger" type="button" aria-haspopup="dialog" aria-controls="flight-story">
+            <div class="interest-card-body">
               <span>01</span>
               <strong>Flight</strong>
               <small>探索 · 视野 · 自由</small>
-              <em>点击阅读冠军之路 <span aria-hidden="true">↗</span></em>
-            </button>
+              <div class="interest-actions">
+                <button class="interest-action story-trigger" type="button" aria-haspopup="dialog" aria-controls="flight-story">
+                  <span>冠军之路</span><b aria-hidden="true">↗</b>
+                </button>
+                <button class="interest-action gallery-trigger" type="button" aria-haspopup="dialog" aria-controls="aeromodel-gallery">
+                  <span>航模影集</span><b aria-hidden="true">↗</b>
+                </button>
+              </div>
+            </div>
           </article>
           <article><span>02</span><strong>Garden</strong><small>空间 · 秩序 · 生长</small></article>
           <article><span>03</span><strong>Music</strong><small>节奏 · 情绪 · 共鸣</small></article>
@@ -131,6 +138,28 @@
               <p>从2006年到2026年，inSky已经走过近二十年。有人从新人变成教官，有人从观众走上赛场，也有人多年后再次回来，与老朋友一起飞行。</p>
               <p>SATAC 2026冠军不是故事的终点。未来，我们仍希望有更多人认识DCS、了解模拟飞行，加入训练、联飞、比赛和内容创作。</p>
               <p class="story-ending">天空没有极限，我们的征程仍在继续。</p>
+            </div>
+          </div>
+        </dialog>
+
+        <dialog id="aeromodel-gallery" class="story-dialog gallery-dialog" aria-labelledby="aeromodel-gallery-title">
+          <div class="story-dialog-panel">
+            <button class="story-close gallery-close" type="button" aria-label="关闭航模影集">×</button>
+            <p class="story-code">FLIGHT / AEROMODELLING / GALLERY</p>
+            <h2 id="aeromodel-gallery-title">航模影集：<span>把飞行缩小，把热爱放大</span></h2>
+            <div class="aeromodel-gallery">
+              <figure class="gallery-item gallery-featured">
+                <img src="images/aeromodel-workshop.webp" alt="工作台上正在接受起飞前检查的螺旋桨航模" loading="lazy" />
+                <figcaption><span>01 / WORKSHOP</span><strong>起飞前的专注</strong></figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <img src="images/aeromodel-takeoff.webp" alt="在草地跑道上迎着夕阳起飞的航模飞机" loading="lazy" />
+                <figcaption><span>02 / TAKEOFF</span><strong>离地的一刻</strong></figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <img src="images/aeromodel-low-pass.webp" alt="在航模飞场上空进行低空通场的喷气式航模" loading="lazy" />
+                <figcaption><span>03 / LOW PASS</span><strong>贴近天空</strong></figcaption>
+              </figure>
             </div>
           </div>
         </dialog>
