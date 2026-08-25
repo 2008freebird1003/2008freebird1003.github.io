@@ -237,6 +237,7 @@ h1 span {
 .interest-card-body { display: grid; min-height: 100%; padding: 28px; }
 .interest-card-body strong, .interest-card-body small { display: block; }
 .interest-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 24px; }
+.interest-actions-single { grid-template-columns: 1fr; }
 .interest-action { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 11px; color: var(--cyan); text-align: left; border: 1px solid var(--line); border-radius: 7px; background: rgba(99,230,255,.025); cursor: pointer; font: .64rem "Cascadia Code", monospace; letter-spacing: .04em; transition: color .2s ease, border-color .2s ease, background .2s ease; }
 .interest-action span { margin: 0; color: inherit; font: inherit; }
 .interest-action b { font-size: .8rem; font-weight: 400; }
@@ -273,6 +274,14 @@ h1 span {
 .story-copy p { margin: 0; }
 .story-copy .story-lead { color: #dce6f4; font-size: 1.05rem; }
 .story-copy .story-ending { padding-top: 18px; color: var(--cyan); border-top: 1px solid var(--line); font-size: 1.12rem; font-weight: 700; }
+
+.aquascape-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--line); }
+.aquascape-notes article { display: grid; gap: 12px; padding: 22px; background: #09111e; }
+.aquascape-notes span, .aquascape-photo-note span { color: var(--cyan); font: .62rem "Cascadia Code", monospace; letter-spacing: .1em; }
+.aquascape-notes strong { font-size: 1.15rem; }
+.aquascape-notes p, .aquascape-photo-note p { margin: 0; color: var(--muted); font-size: .9rem; }
+.aquascape-photo-note { display: grid; min-height: 170px; margin-top: 18px; padding: 28px; align-content: center; gap: 10px; border: 1px dashed rgba(99,230,255,.3); border-radius: 12px; background: linear-gradient(135deg, rgba(99,230,255,.035), rgba(95,135,255,.035)); }
+.aquascape-photo-note strong { font-size: 1.35rem; }
 
 .aeromodel-gallery { columns: 2; column-gap: 14px; }
 .gallery-item { position: relative; min-width: 0; margin: 0 0 14px; overflow: hidden; break-inside: avoid; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
@@ -360,6 +369,7 @@ h1 span {
   .story-dialog-panel { padding: 54px 24px 30px; }
   .story-dialog h2 { font-size: 2rem; }
   .story-video-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .aquascape-notes { grid-template-columns: 1fr; }
   .aeromodel-gallery { columns: 1; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
   .skill-group p { grid-column: 2; }

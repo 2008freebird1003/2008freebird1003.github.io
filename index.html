@@ -24,8 +24,8 @@
     />
     <meta name="twitter:image" content="https://2008freebird1003.github.io/og.png" />
     <title>htwj123 · 个人网站</title>
-    <link rel="stylesheet" href="styles.css?v=20260825-8" />
-    <script src="script.js?v=20260825-8" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260825-9" />
+    <script src="script.js?v=20260825-9" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
@@ -108,7 +108,18 @@
               </div>
             </div>
           </article>
-          <article><span>02</span><strong>Garden</strong><small>空间 · 秩序 · 生长</small></article>
+          <article class="interactive-interest">
+            <div class="interest-card-body">
+              <span>02</span>
+              <strong>Garden</strong>
+              <small>空间 · 秩序 · 生长</small>
+              <div class="interest-actions interest-actions-single">
+                <button class="interest-action aquascape-trigger" type="button" aria-haspopup="dialog" aria-controls="aquascape-story">
+                  <span>水草造景</span><b aria-hidden="true">↗</b>
+                </button>
+              </div>
+            </div>
+          </article>
           <article><span>03</span><strong>Music</strong><small>节奏 · 情绪 · 共鸣</small></article>
         </div>
 
@@ -138,6 +149,28 @@
               <p>从2006年到2026年，inSky已经走过近二十年。有人从新人变成教官，有人从观众走上赛场，也有人多年后再次回来，与老朋友一起飞行。</p>
               <p>SATAC 2026冠军不是故事的终点。未来，我们仍希望有更多人认识DCS、了解模拟飞行，加入训练、联飞、比赛和内容创作。</p>
               <p class="story-ending">天空没有极限，我们的征程仍在继续。</p>
+            </div>
+          </div>
+        </dialog>
+
+        <dialog id="aquascape-story" class="story-dialog aquascape-dialog" aria-labelledby="aquascape-story-title">
+          <div class="story-dialog-panel">
+            <button class="story-close aquascape-close" type="button" aria-label="关闭水草造景内容">×</button>
+            <p class="story-code">GARDEN / AQUASCAPING / NOTES</p>
+            <h2 id="aquascape-story-title">水草造景：<span>在水下建立一座会呼吸的花园</span></h2>
+            <div class="story-copy">
+              <p class="story-lead">水草缸像一座缩小的园林。石、木、水与植物共同构成层次，光线和水流让静止的景观慢慢生长、变化。</p>
+              <p>我喜欢观察不同水草的形态与节奏，也享受从构图、种植到日常维护的过程。每一次修剪和调整，都是在秩序与自然之间重新寻找平衡。</p>
+            </div>
+            <div class="aquascape-notes" aria-label="水草造景关注要素">
+              <article><span>01 / LIGHT</span><strong>光</strong><p>用明暗突出水草的层次，也为稳定生长提供节奏。</p></article>
+              <article><span>02 / FLOW</span><strong>水流</strong><p>让养分与空气循环，在安静的画面中保持生命力。</p></article>
+              <article><span>03 / TRIM</span><strong>修剪</strong><p>控制比例、留出空间，让景观在时间里持续成形。</p></article>
+            </div>
+            <div class="aquascape-photo-note" role="note">
+              <span>PHOTO JOURNAL / 即将加入</span>
+              <strong>水草影集</strong>
+              <p>这里将展示你的水草缸、造景细节与生长记录。</p>
             </div>
           </div>
         </dialog>
