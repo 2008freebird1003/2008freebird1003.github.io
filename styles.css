@@ -266,6 +266,7 @@ h1 span {
 .story-video-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 14px; }
 .story-video-heading h3 { margin: 0; font-size: 1.1rem; letter-spacing: -.01em; }
 .story-video-heading a { color: var(--cyan); font: .68rem "Cascadia Code", monospace; letter-spacing: .05em; }
+.story-video-heading > span { color: var(--cyan); font: .62rem "Cascadia Code", monospace; letter-spacing: .1em; }
 .story-video-heading a:hover { color: var(--green); }
 .story-video-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
 .story-video-frame::before { content: "SATAC / VIDEO"; position: absolute; top: 14px; left: 16px; color: rgba(99,230,255,.35); font: .6rem "Cascadia Code", monospace; letter-spacing: .12em; }
@@ -276,6 +277,9 @@ h1 span {
 .story-copy .story-ending { padding-top: 18px; color: var(--cyan); border-top: 1px solid var(--line); font-size: 1.12rem; font-weight: 700; }
 
 .aquascape-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--line); }
+.aquascape-video { margin-top: 36px; }
+.aquascape-video-frame { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #050912; }
+.aquascape-video-frame video { display: block; width: 100%; height: auto; max-height: 70vh; background: #050912; }
 .aquascape-notes article { display: grid; gap: 12px; padding: 22px; background: #09111e; }
 .aquascape-notes span { color: var(--cyan); font: .62rem "Cascadia Code", monospace; letter-spacing: .1em; }
 .aquascape-notes strong { font-size: 1.15rem; }
