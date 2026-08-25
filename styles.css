@@ -233,6 +233,38 @@ h1 span {
 .interest-strip span { margin-bottom: 30px; color: var(--cyan); font: .7rem "Cascadia Code", monospace; }
 .interest-strip strong { font-size: 1.3rem; }
 .interest-strip small { color: var(--muted); }
+.interest-strip .interactive-interest { padding: 0; }
+.interest-trigger { display: grid; width: 100%; min-height: 100%; padding: 28px; color: var(--text); text-align: left; border: 0; background: transparent; cursor: pointer; transition: background .2s ease; }
+.interest-trigger:hover { background: rgba(99,230,255,.045); }
+.interest-trigger strong, .interest-trigger small { display: block; }
+.interest-trigger em { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 24px; color: var(--cyan); font: normal .66rem "Cascadia Code", monospace; letter-spacing: .06em; }
+.interest-trigger em span { margin: 0; font-size: .8rem; }
+
+.story-dialog {
+  width: min(calc(100% - 32px), 920px);
+  max-height: min(88vh, 820px);
+  padding: 0;
+  color: var(--text);
+  border: 1px solid rgba(99,230,255,.28);
+  border-radius: 18px;
+  background: #0b1220;
+  box-shadow: 0 32px 100px rgba(0,0,0,.65), inset 0 0 70px rgba(99,230,255,.025);
+}
+.story-dialog::backdrop { background: rgba(2,5,11,.82); backdrop-filter: blur(8px); }
+.story-dialog[open] { animation: dialog-in .24s ease-out; }
+.story-dialog-panel { position: relative; padding: clamp(32px, 6vw, 70px); overflow: hidden; }
+.story-dialog-panel::before { content: ""; position: absolute; z-index: -1; width: 330px; height: 330px; top: -190px; right: -120px; border: 1px solid rgba(99,230,255,.13); border-radius: 50%; box-shadow: 0 0 0 38px rgba(99,230,255,.025), 0 0 0 80px rgba(99,230,255,.015); }
+.story-close { position: absolute; top: 20px; right: 20px; display: grid; width: 42px; height: 42px; place-items: center; color: var(--text); border: 1px solid var(--line); border-radius: 50%; background: rgba(7,11,20,.72); cursor: pointer; font-size: 1.45rem; line-height: 1; }
+.story-close:hover { color: var(--cyan); border-color: rgba(99,230,255,.55); }
+.story-code { margin-bottom: 20px; color: var(--cyan); font: .7rem "Cascadia Code", monospace; letter-spacing: .14em; }
+.story-dialog h2 { max-width: 700px; margin-bottom: 34px; font-size: clamp(2rem, 4.5vw, 4.15rem); line-height: 1.08; letter-spacing: -.04em; }
+.story-dialog h2 span { color: transparent; background: linear-gradient(110deg, var(--cyan), var(--blue)); background-clip: text; -webkit-background-clip: text; }
+.story-copy { display: grid; gap: 18px; color: #aab6ca; }
+.story-copy p { margin: 0; }
+.story-copy .story-lead { color: #dce6f4; font-size: 1.05rem; }
+.story-copy .story-ending { padding-top: 18px; color: var(--cyan); border-top: 1px solid var(--line); font-size: 1.12rem; font-weight: 700; }
+
+@keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
 
 .project-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
 .project-card {
@@ -304,6 +336,9 @@ h1 span {
   .interest-strip { grid-template-columns: 1fr; }
   .interest-strip article { border-right: 0; border-bottom: 1px solid var(--line); }
   .interest-strip article:last-child { border-bottom: 0; }
+  .interest-trigger { min-height: 210px; }
+  .story-dialog-panel { padding: 54px 24px 30px; }
+  .story-dialog h2 { font-size: 2rem; }
   .skill-group { grid-template-columns: 48px 1fr; gap: 10px; }
   .skill-group p { grid-column: 2; }
   .contact-box { padding: 28px 22px; }
