@@ -233,12 +233,6 @@ h1 span {
 .interest-strip span { margin-bottom: 30px; color: var(--cyan); font: .7rem "Cascadia Code", monospace; }
 .interest-strip strong { font-size: 1.3rem; }
 .interest-strip small { color: var(--muted); }
-.interest-flight > span { margin-bottom: 18px; }
-.interest-submenu { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
-.interest-submenu p { margin-bottom: 10px; color: var(--cyan); font: .62rem "Cascadia Code", monospace; letter-spacing: .12em; }
-.interest-submenu ul { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
-.interest-submenu li { position: relative; padding-left: 16px; color: #b7c5d9; font-size: .82rem; }
-.interest-submenu li::before { content: "↳"; position: absolute; left: 0; color: var(--cyan); }
 
 .project-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
 .project-card {
